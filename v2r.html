@@ -1,0 +1,23 @@
+# codelog
+codelog
+
+
+V2Ray一键安装代码：
+apt-get update -y && apt-get install curl -y
+bash <(curl -s -L https://git.io/v2ray.sh)
+4
+开启自带 BBR 加速：
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+lsmod | grep bbr
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+
+
+
+
+install v2y code :
+bash <(curl -s -L https://git.io/v2ray.sh)	
+systemctl stop firewalld.service	
+systemctl disable firewalld.service
+v2ray url	
